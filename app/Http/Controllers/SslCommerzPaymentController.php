@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Library\SslCommerz\SslCommerzNotification;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class SslCommerzPaymentController extends Controller
@@ -31,17 +31,17 @@ class SslCommerzPaymentController extends Controller
         $post_data['tran_id'] = uniqid(); // tran_id must be unique
 
         # CUSTOMER INFORMATION
-        $post_data['cus_name'] = $request->input('customer_name');
-        $post_data['cus_email'] = 'customer@mail.com';
-        $post_data['cus_add1'] = 'Customer Address';
+        $post_data['cus_name'] = 'Faiyaz Rahman';
+        $post_data['cus_email'] = 'faiyazrahman03@mail.com';
+        $post_data['cus_add1'] = '81/B/1 Dinanath Sen Road';
         $post_data['cus_add2'] = "";
-        $post_data['cus_city'] = "";
-        $post_data['cus_state'] = "";
-        $post_data['cus_postcode'] = "";
+        $post_data['cus_city'] = "Dhaka";
+        $post_data['cus_state'] = "Dhaka";
+        $post_data['cus_postcode'] = "1204";
         $post_data['cus_country'] = "Bangladesh";
-        $post_data['cus_phone'] = '8801XXXXXXXXX';
+        $post_data['cus_phone'] = '01799096753';
         $post_data['cus_fax'] = "";
-
+    
         # SHIPMENT INFORMATION
         $post_data['ship_name'] = "testecommrfl1";
         $post_data['ship_add1'] = "Dhaka";
@@ -96,24 +96,24 @@ class SslCommerzPaymentController extends Controller
         # In orders table order uniq identity is "transaction_id","status" field contain status of the transaction, "amount" is the order amount to be paid and "currency" is for storing Site Currency which will be checked with paid currency.
 
         $post_data = array();
-        $post_data['total_amount'] = '10'; # You cant not pay less than 10
+        $post_data['total_amount'] = '1200'; # You cant not pay less than 10
         $post_data['currency'] = "BDT";
         $post_data['tran_id'] = uniqid(); // tran_id must be unique
 
         # CUSTOMER INFORMATION
-        $post_data['cus_name'] = 'Customer Name';
-        $post_data['cus_email'] = 'customer@mail.com';
-        $post_data['cus_add1'] = 'Customer Address';
+        $post_data['cus_name'] = 'Faiyaz Rahman';
+        $post_data['cus_email'] = 'faiyazrahman03@mail.com';
+        $post_data['cus_add1'] = '81/B/1 Dinanath sen road gandaria dhaka';
         $post_data['cus_add2'] = "";
-        $post_data['cus_city'] = "";
-        $post_data['cus_state'] = "";
-        $post_data['cus_postcode'] = "";
+        $post_data['cus_city'] = "Dhaka";
+        $post_data['cus_state'] = "Dhaka";
+        $post_data['cus_postcode'] = "1204";
         $post_data['cus_country'] = "Bangladesh";
-        $post_data['cus_phone'] = '8801XXXXXXXXX';
+        $post_data['cus_phone'] = '01799096753';
         $post_data['cus_fax'] = "";
 
         # SHIPMENT INFORMATION
-        $post_data['ship_name'] = "Store Test";
+        $post_data['ship_name'] = "testecommrfl1";
         $post_data['ship_add1'] = "Dhaka";
         $post_data['ship_add2'] = "Dhaka";
         $post_data['ship_city'] = "Dhaka";
