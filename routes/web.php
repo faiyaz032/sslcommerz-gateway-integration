@@ -25,7 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/checkout', 'SslCommerzPaymentController@exampleHostedCheckout');
 
 Route::post('/pay', 'SslCommerzPaymentController@index');
-Route::post('/pay-via-ajax', 'SslCommerzPaymentController@payViaAjax');
 
 Route::post('/success', 'SslCommerzPaymentController@success');
 Route::post('/fail', 'SslCommerzPaymentController@fail');
