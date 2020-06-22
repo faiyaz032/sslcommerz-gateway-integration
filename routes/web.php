@@ -20,13 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/checkout', function (){
-    return view('exampleHosted');
-});
 
 // SSLCOMMERZ Start
-Route::get('/example1', 'SslCommerzPaymentController@exampleEasyCheckout');
-Route::get('/example2', 'SslCommerzPaymentController@exampleHostedCheckout');
+Route::get('/checkout', 'SslCommerzPaymentController@exampleHostedCheckout');
 
 Route::post('/pay', 'SslCommerzPaymentController@index');
 Route::post('/pay-via-ajax', 'SslCommerzPaymentController@payViaAjax');
