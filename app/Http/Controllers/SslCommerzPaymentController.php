@@ -31,17 +31,17 @@ class SslCommerzPaymentController extends Controller
         $post_data['tran_id'] = uniqid(); // tran_id must be unique
 
         # CUSTOMER INFORMATION
-        $post_data['cus_name'] = 'Faiyaz Rahman';
-        $post_data['cus_email'] = 'faiyazrahman03@mail.com';
-        $post_data['cus_add1'] = '81/B/1 Dinanath Sen Road';
+        $post_data['cus_name'] = 'Customer Name';
+        $post_data['cus_email'] = 'customeremail@mail.com';
+        $post_data['cus_add1'] = '';
         $post_data['cus_add2'] = "";
         $post_data['cus_city'] = "Dhaka";
-        $post_data['cus_state'] = "Dhaka";
-        $post_data['cus_postcode'] = "1204";
+        $post_data['cus_state'] = "";
+        $post_data['cus_postcode'] = "";
         $post_data['cus_country'] = "Bangladesh";
-        $post_data['cus_phone'] = '01799096753';
+        $post_data['cus_phone'] = '017XXXXXXX';
         $post_data['cus_fax'] = "";
-    
+
         # SHIPMENT INFORMATION
         $post_data['ship_name'] = "testecommrfl1";
         $post_data['ship_add1'] = "Dhaka";
